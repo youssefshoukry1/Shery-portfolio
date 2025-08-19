@@ -1,8 +1,10 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
+import About from "../About/About";
 
 export default function Home() {
   return (
+    <>
     <section
       className="relative h-screen w-full flex items-center justify-center text-center overflow-hidden"
       style={{
@@ -75,5 +77,8 @@ export default function Home() {
 
       </div>
     </section>
+    
+    <About/>
+    </>
   );
 }
