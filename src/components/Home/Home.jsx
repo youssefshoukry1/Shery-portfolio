@@ -36,7 +36,7 @@ export default function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Hey, I'm Shery
+          Hey, I'm Sherry
         </Motion.h1>
 
         {/* الوظيفة */}
