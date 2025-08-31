@@ -61,16 +61,30 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.6 }}
         >
           {/* زرار أساسي */}
-          <button className="px-6 py-3 rounded-xl text-base font-semibold 
+          <button 
+                onClick={() => {
+              const aboutSection = document.getElementById('About');
+              if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          className="px-6 py-3 rounded-xl text-base font-semibold 
             bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-800 
             text-white shadow-[0_0_15px_rgba(16,185,129,0.5)] 
             hover:shadow-[0_0_30px_rgba(16,185,129,0.8)] 
             transition-all duration-300">
-            View Work
+            About me
           </button>
 
           {/* زرار Outline */}
-          <button className="px-6 py-3 rounded-xl text-base font-semibold border border-emerald-500 text-emerald-400 
+          <button 
+                onClick={() => {
+              const aboutSection = document.getElementById('Contact');
+              if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          className="px-6 py-3 rounded-xl text-base font-semibold border border-emerald-500 text-emerald-400 
             hover:bg-gradient-to-r hover:from-emerald-700 hover:to-emerald-900 hover:text-white 
             transition-all duration-300">
             Contact
