@@ -8,7 +8,6 @@ export default function Navbar() {
   const navItem = [
     { name: "Home", id: "Home" },
     { name: "About", id: "About" },
-    { name: "Projects", id: "Projects" },
     { name: "Contact", id: "Contact" },
   ];
 
@@ -34,8 +33,9 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-transparent shadow-none">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-center items-center">
         {/* Desktop Menu */}
-        <Motion.ul
-          className="hidden md:flex gap-10 uppercase tracking-wide"
+        <button>
+                  <Motion.ul
+          className="hidden md:flex gap-10 tracking-wide"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -53,6 +53,8 @@ export default function Navbar() {
             </Motion.li>
           ))}
         </Motion.ul>
+        </button>
+
 
         {/* Mobile Menu Button */}
         <button className="md:hidden text-white absolute right-6  top-4" onClick={() => setIsOpen(!isOpen)}>

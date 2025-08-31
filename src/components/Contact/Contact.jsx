@@ -20,7 +20,7 @@ export default function Contact() {
 
   return (
     <section
-    id="Home"
+    id="Contact"
       className="py-20"
       style={{
         background: "linear-gradient(135deg, #000000, #013220)",
