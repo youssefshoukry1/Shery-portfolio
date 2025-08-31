@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <>
     <section
+    id="Home"
       className="relative h-screen w-full flex items-center justify-center text-center overflow-hidden"
       style={{
         backgroundImage: "url(/marina.webp)",

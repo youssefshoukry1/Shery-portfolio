@@ -43,6 +43,7 @@ export default function About() {
 
   return (
     <section
+    id="Home"
       className="py-20"
       style={{
         background: "linear-gradient(135deg, #000000, #013220)",

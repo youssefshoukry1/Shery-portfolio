@@ -6,10 +6,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItem = [
-    { name: "Home", id: "Home-section" },
-    { name: "About", id: "About-section" },
-    { name: "Projects", id: "Projects-section" },
-    { name: "Contact", id: "Contact-section" },
+    { name: "Home", id: "Home" },
+    { name: "About", id: "About" },
+    { name: "Projects", id: "Projects" },
+    { name: "Contact", id: "Contact" },
   ];
 
   const containerVariants = {

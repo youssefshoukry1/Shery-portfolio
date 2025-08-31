@@ -6,20 +6,21 @@ export default function Contact() {
   const contacts = [
     {
       icon: <FaEnvelope size={24} />,
-      link: "mailto:your-email@example.com",
+      link: "mailto:sherryadel92@gmail.com",
     },
     {
       icon: <FaWhatsapp size={24} />,
-      link: "https://wa.me/201234567890",
+      link: "https://wa.me/+201279154070",
     },
     {
       icon: <FaLinkedin size={24} />,
-      link: "https://www.linkedin.com/in/yourprofile/",
+      link: "https://www.linkedin.com/in/sherry-adel-7447b9293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
   ];
 
   return (
     <section
+    id="Home"
       className="py-20"
       style={{
         background: "linear-gradient(135deg, #000000, #013220)",
@@ -48,7 +49,7 @@ export default function Contact() {
 
         {/* Right side: Form */}
         <Motion.form
-          action={`mailto:your-email@example.com`}
+          action={`mailto:sherryadel92@gmail.com`}
           method="POST"
           encType="text/plain"
           className="bg-gray-900/80 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-emerald-700 flex flex-col gap-4 flex-1"
