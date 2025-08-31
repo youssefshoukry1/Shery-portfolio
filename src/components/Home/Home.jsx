@@ -1,6 +1,7 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
 import About from "../About/About";
+import Contact from "../Contact/Contact";
 
 export default function Home() {
   return (
@@ -79,6 +80,7 @@ export default function Home() {
     </section>
     
     <About/>
+    <Contact/>
     </>
   );
 }
