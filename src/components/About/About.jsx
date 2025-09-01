@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { FaGraduationCap, FaClipboardList, FaUsers, FaBriefcase, FaStar } from "react-icons/fa";
 
