@@ -79,7 +79,7 @@ export default function Contact() {
             type="submit"
             className="w-full py-3 text-lg font-semibold text-white rounded-xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-700 shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:scale-105 hover:shadow-[0_0_35px_rgba(16,185,129,0.6)] transition-transform duration-300"
           >
-            🚀 Send Message
+              Send Message
           </button>
         </Motion.form>
       </div>

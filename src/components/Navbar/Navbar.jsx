@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+ const [active, setActive] = useState("Home");
   const navItem = [
     { name: "Home", id: "Home" },
     { name: "About", id: "About" },
@@ -29,13 +29,31 @@ export default function Navbar() {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      navItem.forEach(({ id }) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const top = section.offsetTop - 100;
+          const bottom = top + section.offsetHeight;
+          if (window.scrollY >= top && window.scrollY < bottom) {
+            setActive(id);
+          }
+        }
+      });
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-transparent shadow-none">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-center items-center">
         {/* Desktop Menu */}
         <button>
                   <Motion.ul
-          className="hidden md:flex gap-10 tracking-wide"
+          className="md:flex gap-10 tracking-wide flex justify-center items-center"
+          
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -44,8 +62,11 @@ export default function Navbar() {
             <Motion.li
               key={id}
               variants={itemVariants}
-              className="relative group text-white text-lg font-semibold cursor-pointer 
-                         hover:text-green-400 transition-colors duration-300"
+              className={`relative group text-white text-lg font-semibold cursor-pointer 
+              hover:text-green-400 transition-colors duration-300 ${
+                active === id ? "text-green-400" : "hover:text-green-300" 
+              }`}
+              
               onClick={() => handleScroll(id)}
             >
               {name}
@@ -54,12 +75,10 @@ export default function Navbar() {
           ))}
         </Motion.ul>
         </button>
-
-
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white absolute right-6  top-4" onClick={() => setIsOpen(!isOpen)}>
+        {/* <button className="md:hidden text-white absolute right-6  top-4" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Menu */}
