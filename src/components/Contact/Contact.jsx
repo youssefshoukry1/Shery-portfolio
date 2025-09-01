@@ -28,7 +28,7 @@ export default function Contact() {
       }}
     >
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">
-        Contact Me
+       <span className=" text-green-400">Contact</span> Me
       </h1>
 
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-6">
