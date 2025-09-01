@@ -11,25 +11,14 @@ export default function About() {
     { icon: <FaUsers size={28} />, title: "Personal Skills", content: "Sociable and loves teamwork." },
   ];
 
-  const getFloatAnimation = (index) => ({
-    y: [0, -25 - index * 2, 15 + index * 2, 0],
-    x: [0, 8 + index * 2, -8 - index * 2, 0],
-    rotate: [0, 2, -2, 0],
-    transition: { duration: 6 + index, repeat: Infinity, repeatType: "loop", ease: "easeInOut" },
-  });
 
-  const [scrollY, setScrollY] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
 
   // حركة خلفية بسيطة
   const backgroundAnimation = {
     backgroundPositionX: ["0%", "50%", "100%", "50%", "0%"],
     backgroundPositionY: ["0%", "20%", "0%"],
-    transition: { duration: 60, repeat: Infinity, ease: "linear" },
+    transition: { duration: 90, repeat: Infinity, ease: "linear" },
   };
 
   return (
